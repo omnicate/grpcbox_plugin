@@ -130,7 +130,6 @@ compile_pb(Filename, OutDir, BeamOutDir, GpbOpts) ->
         true ->
             rebar_log:log(info, "Writing ~s", [GeneratedPB]),
             case gpb_compile:file(Filename, [{rename,{msg_name,snake_case}},
-                                             {rename,{msg_fqname,base_name}},
                                              use_packages, maps,
                                              strings_as_binaries, {i, "."},
                                              {report_errors, false},
